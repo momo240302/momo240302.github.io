@@ -61,3 +61,13 @@ dialog{border:0;padding:20px;background:var(--paper);color:var(--ink);width:min(
 dialog::backdrop{background:rgba(36,55,47,.68)}.dialog-close{float:right;border:0;background:none;font-size:30px;cursor:pointer}.dialog-image{clear:both;height:380px;background:#aab8a2;display:grid;place-items:center;color:white}dialog h3{font-weight:600;font-size:24px;margin:20px 0 4px}dialog p{color:var(--muted);margin:0}
 @media(max-width:850px){.mobile-menu{display:block;position:fixed;right:18px;top:16px;z-index:20;border:0;background:var(--forest);color:white;border-radius:50%;width:45px;height:45px;font-size:20px}.sidebar{transform:translateX(-100%);transition:.25s;width:min(330px,88vw)}.sidebar.open{transform:none}main{margin-left:0}.page{padding:72px 24px}.hero{min-height:auto;padding:60px 0 80px}.skill-columns{grid-template-columns:1fr}.timeline article,.cv-layout section{grid-template-columns:1fr;gap:8px}.gallery{grid-template-columns:1fr;grid-auto-rows:280px}.photo-card.wide{grid-column:auto}.cv-title-row{align-items:flex-start;gap:20px;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+.avatar {
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
