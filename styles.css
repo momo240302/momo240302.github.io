@@ -1,0 +1,63 @@
+:root{--ink:#28323a;--forest:#5f927c;--sage:#719c89;--cream:#f1f7f4;--paper:#ffffff;--line:#dbe7e1;--muted:#66736e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Calibri,"Segoe UI",Arial,sans-serif;line-height:1.65}
+a{color:inherit}
+.sidebar{position:fixed;inset:0 auto 0 0;width:310px;padding:52px 38px 32px;background:#dcebe4;color:var(--ink);display:flex;flex-direction:column;z-index:10}
+.avatar{width:132px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:#86aa99;border:4px solid #fff;box-shadow:0 12px 28px rgba(55,88,73,.14);margin-bottom:24px}
+.avatar span{font-size:34px;letter-spacing:.08em;color:#fff}
+.eyebrow,.kicker{margin:0 0 9px;text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600}
+.profile h1{font-size:30px;line-height:1.2;margin:0 0 12px;font-weight:600}
+.role{font-size:14px;color:#53645c;line-height:1.6;margin:0}
+nav{margin:54px 0 30px;display:grid;gap:7px}
+.nav-link{padding:9px 0;text-decoration:none;color:#5f6d66;font-size:14px;transition:.2s}
+.nav-link:hover,.nav-link.active{color:#245642;transform:translateX(5px)}
+.nav-link.active::before{content:"—";margin-right:8px;color:#5f927c}
+.contact{margin-top:auto;font-size:12px;color:#66776f;display:grid;gap:7px}
+.contact a{text-decoration:none;color:#315b49}
+.contact p{margin:4px 0 0}
+main{margin-left:310px;min-height:100vh}
+.page{display:none;max-width:1120px;margin:auto;padding:68px 7vw 100px;animation:reveal .45s ease}
+.page.active{display:block}
+@keyframes reveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero{min-height:76vh;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line)}
+.kicker{color:var(--sage)}
+.kicker span{color:var(--forest)}
+.hero h2{font-size:18px;line-height:1.65;font-weight:400;max-width:720px;margin:12px 0 4px;letter-spacing:0}
+.page-header h2{font-size:clamp(40px,5vw,72px);line-height:1.1;font-weight:500;max-width:900px;margin:12px 0 25px;letter-spacing:-.03em}
+.intro{max-width:720px;color:var(--muted);font-size:18px;margin:0}
+.hero-actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.button{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:4px;text-decoration:none;border:1px solid var(--forest);font:600 14px Calibri,"Segoe UI",Arial,sans-serif;cursor:pointer}
+.primary{background:var(--forest);color:white}.secondary{background:transparent;color:var(--forest)}
+.disabled{opacity:.55;cursor:not-allowed}
+.content-section{padding:76px 0;border-bottom:1px solid var(--line)}
+.section-heading{display:flex;gap:28px;align-items:baseline;margin-bottom:34px}
+.section-heading p{color:var(--sage);font-size:12px;margin:0}
+.section-heading h3,.cv-layout h3{font-weight:500;font-size:29px;margin:0}
+.interest-list{display:flex;flex-wrap:wrap;gap:10px}
+.interest-list span{padding:10px 15px;background:var(--cream);border:1px solid var(--line);border-radius:4px;color:#426553}
+.status{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--sage);font-weight:600}
+h4{font-weight:600;font-size:19px;line-height:1.4;margin:17px 0 10px}
+.timeline p,.skill-columns p{color:var(--muted);font-size:14px}
+.timeline article{display:grid;grid-template-columns:150px 1fr;gap:35px;padding:28px 0;border-top:1px solid var(--line)}
+.timeline h4{margin:0 0 2px}.timeline p{margin:6px 0}.date,.meta{font-size:12px!important;color:var(--sage)!important;text-transform:uppercase;letter-spacing:.07em}
+.publication{padding:30px;background:var(--cream);border-left:3px solid var(--sage)}
+.publication p{margin:13px 0 0}.publication .note{font-size:13px;color:var(--muted)}
+.skill-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:35px}.skill-columns h4{margin:0 0 8px}
+.page-header{padding:50px 0 55px;border-bottom:1px solid var(--line)}
+.page-header h2{font-size:clamp(40px,5vw,62px)}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:320px;gap:13px;margin-top:45px}
+.photo-card{position:relative;border:0;padding:0;overflow:hidden;background:var(--image);cursor:pointer;text-align:left;color:#fff}
+.photo-card::after{content:"";position:absolute;inset:55% 0 0;background:rgba(31,54,44,.72);transition:.25s}
+.photo-card:hover::after{background:rgba(31,54,44,.82)}
+.photo-card:hover .bird-mark{transform:translate(-50%,-54%) scale(1.06)}
+.bird-mark{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);font-size:90px;color:rgba(255,255,255,.43);transition:.25s}
+.photo-info{position:absolute;z-index:2;left:24px;bottom:20px;display:grid}
+.photo-info strong{font:600 19px Calibri,"Segoe UI",Arial,sans-serif}.photo-info em{font-size:13px;color:#f3f5f3}
+.photo-card.wide{grid-column:span 2}.copyright{font-size:12px;color:var(--muted);margin-top:26px}
+.cv-title-row{justify-content:space-between}.section-number-title{display:flex;gap:28px;align-items:baseline}.cv-layout{display:grid;gap:45px}.cv-layout section{display:grid;grid-template-columns:220px 1fr;border-top:1px solid var(--line);padding-top:25px}.cv-layout article h4{margin:8px 0}.cv-layout article p{color:var(--muted)}
+.mobile-menu{display:none}
+dialog{border:0;padding:20px;background:var(--paper);color:var(--ink);width:min(720px,88vw);box-shadow:0 30px 90px rgba(0,0,0,.24)}
+dialog::backdrop{background:rgba(36,55,47,.68)}.dialog-close{float:right;border:0;background:none;font-size:30px;cursor:pointer}.dialog-image{clear:both;height:380px;background:#aab8a2;display:grid;place-items:center;color:white}dialog h3{font-weight:600;font-size:24px;margin:20px 0 4px}dialog p{color:var(--muted);margin:0}
+@media(max-width:850px){.mobile-menu{display:block;position:fixed;right:18px;top:16px;z-index:20;border:0;background:var(--forest);color:white;border-radius:50%;width:45px;height:45px;font-size:20px}.sidebar{transform:translateX(-100%);transition:.25s;width:min(330px,88vw)}.sidebar.open{transform:none}main{margin-left:0}.page{padding:72px 24px}.hero{min-height:auto;padding:60px 0 80px}.skill-columns{grid-template-columns:1fr}.timeline article,.cv-layout section{grid-template-columns:1fr;gap:8px}.gallery{grid-template-columns:1fr;grid-auto-rows:280px}.photo-card.wide{grid-column:auto}.cv-title-row{align-items:flex-start;gap:20px;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
